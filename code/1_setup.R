@@ -23,8 +23,7 @@ set.seed(112618)
 ## Read in all data directly from EDI
 #--------------------------------------------
 
-
-# Package ID: knb-lter-sbc.156.2 Cataloging System:https://pasta.edirepository.org.
+# Package ID: knb-lter-sbc.156.1 Cataloging System:https://pasta.edirepository.org.
 # Data set title: SBC LTER: Reef: The size-dependent functional response of lobster foraging on purple urchin.
 # Data set creator:    - Santa Barbara Coastal LTER 
 # Data set creator:  Bartholomew DiFiore -  
@@ -32,7 +31,7 @@ set.seed(112618)
 # Contact:    - Information Manager, Santa Barbara Coastal LTER   - sbclter@msi.ucsb.edu
 # Stylesheet v2.11 for metadata conversion into program: John H. Porter, Univ. Virginia, jporter@virginia.edu 
 
-inUrl1  <- "https://pasta-s.lternet.edu/package/data/eml/knb-lter-sbc/156/2/809131efb9b03a7bf5306dc3d343d5ca" 
+inUrl1  <- "https://pasta.lternet.edu/package/data/eml/knb-lter-sbc/156/1/809131efb9b03a7bf5306dc3d343d5ca" 
 infile1 <- tempfile()
 try(download.file(inUrl1,infile1,method="curl"))
 if (is.na(file.size(infile1))) download.file(inUrl1,infile1,method="auto")
@@ -70,8 +69,6 @@ if (class(dt1$mr)=="factor") dt1$mr <-as.numeric(levels(dt1$mr))[as.integer(dt1$
 if (class(dt1$mr)=="character") dt1$mr <-as.numeric(dt1$mr)
 if (class(dt1$mc)=="factor") dt1$mc <-as.numeric(levels(dt1$mc))[as.integer(dt1$mc) ]               
 if (class(dt1$mc)=="character") dt1$mc <-as.numeric(dt1$mc)
-
-# Convert Missing Values to NA for non-dates
 
 write.csv(dt1, "data/cleaned/loburc_cleaned.csv", row.names = F)
 
