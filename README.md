@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/612281563.svg)](https://zenodo.org/badge/latestdoi/612281563)
+
 # Variation in body size drives spatial and temporal variation in lobster-urchin interaction strength
 
 **Bartholomew P. DiFiore and Adrian C. Stier**
